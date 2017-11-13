@@ -17,8 +17,10 @@ The `type` will be added autoatically.
 
 in `example/actions.js`
 ```
+// import the constants
+import constants from './constants.js';
+
 // Create some actions
-// ===========================
 const generateBaz = ({ foo, bar }) => ({
   baz: `${foo} says: ${bar}`,
 });
@@ -28,13 +30,11 @@ const generateHelloWorld = (hello, world) => ({
 });
 
 // Collection of actions
-// ===========================
-const myActions = {
+const actions = {
   generateBaz,
 };
 
-// Bind actions to constants.
-// ===========================
+// Finally we bind the actions to constants.
 const ExampleActions = bindActionsToConstants({
   constants,
   actions,
@@ -44,5 +44,3 @@ const ExampleActions = bindActionsToConstants({
 // ===========================
 export default ExampleActions;
 ```
-
-
