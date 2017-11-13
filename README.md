@@ -9,6 +9,8 @@ const constants = {
   GENERATE_BAZ: 'USER/GENERATE_BAZ',
   GENERATE_HELLO_WORLD: 'EXAMPLE/GENERATE_HELLO_WORLD'
 };
+
+export default constants;
 ```
 
 # Actions
