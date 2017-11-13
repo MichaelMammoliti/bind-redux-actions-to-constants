@@ -16,6 +16,8 @@ An actions is just a function which returns a payload.
 The `type` will be added autoatically.
 
 in `example/actions.js`
+
+1. import the constants.
 ```
 import constants from './constants.js';
 ```
