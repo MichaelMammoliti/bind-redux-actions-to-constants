@@ -2,6 +2,7 @@
 Small utility to bind redux actions to constants.
 
 
+# Constants
 in `example/constants.js`
 ```
 const constants = {
@@ -9,6 +10,10 @@ const constants = {
   GENERATE_HELLO_WORLD: 'EXAMPLE/GENERATE_HELLO_WORLD'
 };
 ```
+
+# Actions
+An actions is just a function which returns a payload. 
+The `type` will be added autoatically.
 
 in `example/actions.js`
 ```
@@ -39,3 +44,5 @@ const ExampleActions = bindActionsToConstants({
 // ===========================
 export default ExampleActions;
 ```
+
+
