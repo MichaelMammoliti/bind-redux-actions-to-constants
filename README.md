@@ -17,10 +17,11 @@ The `type` will be added autoatically.
 
 in `example/actions.js`
 ```
-// import the constants
 import constants from './constants.js';
+```
 
-// Create some actions
+2. Create some actions.
+```
 const generateBaz = ({ foo, bar }) => ({
   baz: `${foo} says: ${bar}`,
 });
@@ -28,19 +29,22 @@ const generateBaz = ({ foo, bar }) => ({
 const generateHelloWorld = (hello, world) => ({
   hello: `${hello} ${world}`,
 });
+```
 
-// Collection of actions
+3. Create an object of actions.
+```
 const actions = {
   generateBaz,
+  generateHelloWorld,
 };
+```
 
-// Finally we bind the actions to constants.
+4. Finally we bind the actions to constants and we can export the module.
+```
 const ExampleActions = bindActionsToConstants({
   constants,
   actions,
 });
 
-// Export the actions
-// ===========================
 export default ExampleActions;
 ```
