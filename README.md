@@ -52,3 +52,17 @@ const ExampleActions = bindActionsToConstants({
 
 export default ExampleActions;
 ```
+
+5. In our view:
+```
+import ExampleActions from 'example/actions';
+
+handleClick() {
+  ExampleActions.generateBaz({
+    foo: 'foo',
+    baz: 'baz',
+  });
+}
+```
+
+If you want to call the actions without passing `this.props.dispatch` everytime you might want to have a look to https://github.com/MichaelMammoliti/redux-generate-actions
